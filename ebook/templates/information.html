@@ -1,0 +1,131 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+       <head>
+              <style>
+
+                     .galary1{
+                     margin: 10px;
+  			padding-left: 2px;
+  			float: left;
+  			width: 300px;
+			height: 400px;
+			
+                     }
+
+                     .galary{
+                            margin: 5px;
+                              
+                              float: left;
+                              width: 300px;
+                            height: 400px;
+                            
+       
+                     }
+       
+                     .galary:hover{
+                            background-color: rgb(238, 233, 233);
+                     }
+                     .img {
+                            width: 100px;
+       
+                            height: 100pz;
+                       }
+                       ul {
+			
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden;
+                            border: 1px solid #e7e7e7;
+                            background-color: #f3f3f3;
+                            
+                       }
+                       
+                       li {
+                            float: right;
+                       }
+                       li:hover{
+                              color:rgb(152, 66, 66);	
+                     
+       
+                       }
+                       
+                       li a {
+                            
+                            margin-left: 10px; 
+                            display: block;
+                            color: rgb(58, 56, 56);
+                            text-align: center;
+                            padding: 14px 16px;
+                            text-decoration: none;
+                       }
+                       
+                       li a:hover{
+                            background-color: #ddd;
+                       }s
+       
+
+              </style>
+
+
+
+       </head> 
+
+
+       <body>
+
+              <header>
+			<ul>
+				<li style="float:left; margin-top:0px; margin-left: 15px; font-size: 25px; text-transform: uppercase; font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 10px; padding: 6px; border-radius: 10px;">Travel</li>
+				<li> <a style="color: black; margin-left:50px;" href="{% url 'index' %}">logout</a></li></li>
+				
+			</ul>
+
+			
+		</header>
+
+       
+
+
+
+              <section>
+
+       <div style="margin: 100px 0px 25px 50px; height:300;"  onclick="myalert()">
+						
+
+              {% for dest in dests %}
+
+                            <div class="galary">
+              
+                                   
+                                                        <img src="{{dest.img.url}}"  alt="img" width="300" height="200">
+                                                        
+                                                        <p>{{dest.name}}</p>
+                                                        
+                                                        
+                                                        <p>{{dest.des}}</p>
+                                                        
+                                                        From Rs.{{dest.price}}
+                                   
+                                   <!-- <span class="b">	<video width="320" height="250 px" controls>
+                                                        <source src="{{dest.video.url}}" type="video/mp4" >
+                                                 
+                                                        Your browser does not support the video tag.
+                                                        </video>
+                                   </span>
+                             -->
+                            </div>
+              {% endfor %}
+</div>
+
+<script>
+function myalert() {
+alert("register and login first");
+}
+</script>
+</section>
+       </body>
+</html>

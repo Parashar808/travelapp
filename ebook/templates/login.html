@@ -1,0 +1,87 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <style>
+           input,h1{
+               margin:30px 0px 0px 150px;
+           }
+           form{
+
+            border: 0px solid ;
+           }
+           .c1{
+            width:100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           }
+           .bg1{
+
+                    background-color: aliceblue;
+           }
+           ul {
+			
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+            
+       }
+       
+       li {
+            float: right;
+       }
+       li:hover{
+              color:rgb(152, 66, 66);	
+     
+
+       }
+
+      
+
+
+        
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+			<ul>
+				<li style="float:left; margin-top:0px; margin-left: 15px; font-size: 25px; text-transform: uppercase; font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 10px; padding: 6px; border-radius: 10px;"><a href="/">Travel</a></li>
+                <li> </li>
+
+			</ul>
+
+			
+		</header>
+   
+        <div class="c1" style=" background-image:url({% static 'images/loginnew.jpg' %});" >
+
+
+        <form action="login" method="POST" class="bg1" style="height:80vh; width:70vh;border:1px solid black;    " >
+            {% csrf_token %}
+            <h1 style="margin-top:100px ;" >Login Form</h1>
+            <input type="text" name="username" placeholder="username"><br/>
+            <input type="password" name="password" placeholder="password"><br/>
+            <input type="submit">
+            <a href="register">Register</a>
+        </form>
+
+        <div>
+            {% for message in messages%}
+
+            <h3>{{message}}</h3>
+            {% endfor %}
+        </div>
+        
+    </div>
+
+    </body>
+</html>

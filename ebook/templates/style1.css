@@ -1,0 +1,14 @@
+.class1{
+    float: left;
+    margin-bottom: 50px;
+    width: 50%;
+
+}
+.class2{
+    float:right;
+    width: 50%;
+}
+
+html{
+    background-color: black;
+}

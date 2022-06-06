@@ -1,0 +1,92 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <style>
+            input,h1{
+                margin:20px 0px 0px 100px;
+            }
+            
+            .c1{
+             width:100%;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-size: cover;
+            }
+            .bg1{
+ 
+                     background-color: aliceblue;
+            }
+            ul {
+			
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 1px solid #e7e7e7;
+                background-color: #f3f3f3;
+                
+           }
+           
+           li {
+                float: right;
+           }
+           li:hover{
+                  color:rgb(152, 66, 66);	
+         
+    
+           }
+           
+           a {
+                
+                
+           }
+           
+           a:hover{
+                background-color: #ddd;
+           }
+    
+        </style>
+    </head>
+
+    <body>
+        <header>
+			<ul>
+				<li style="float:left; margin-top:0px; margin-left: 15px; font-size: 25px; text-transform: uppercase; font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 10px; padding: 6px; border-radius: 10px;">Travel</li>
+                <li></li>
+
+			</ul>
+
+			
+		</header>
+   
+        <div class="c1" style=" background-image:url({% static 'images/register1234.jpg' %});" >
+
+        <form action="register" method="POST" class="bg1" style="height:80vh; width:60vh;border:1px solid black;    ">
+            {% csrf_token %}
+            <h1>Register Form</h1>
+            <input type="text" name="first_name" placeholder="first name"><br>
+            <input type="text" name="last_name" placeholder="last name"><br>
+            <input type="email" name="email" placeholder="email"><br>
+            <input type="text" name="username" placeholder="username"><br>
+            <input type="password" name="password1" placeholder="password"><br>
+            <input type="password" name="password2" placeholder="confirm password"><br>
+            <input type="submit">
+
+            <a href="login" >Login..</a>
+        </form>
+
+        <div>
+            {% for message in messages %}
+            <h4>{{message }}</h4>
+            {% endfor %}    
+        </div>
+        </div>
+    </body>
+
+
+
+</html>

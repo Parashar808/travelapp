@@ -5,16 +5,63 @@
 <html>
 
     <head>
+        <style>
+            .class1{
+                border:1px solid rgb(241, 236, 236);
+                margin-top: 100px;
+                background-color: aliceblue;
+            }
+            a{
+                padding:10%;
+                margin-left:90px;
+
+            
+            }
+            ul {
+			
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 1px solid #e7e7e7;
+                background-color: #f3f3f3;
+                
+           }
+           
+           li {
+                float: right;
+           }
+           li,a:hover{
+                  color:rgb(152, 66, 66);	
+         
+    
+           }
+    
+           a{
+               text-decoration: none;
+               color:black;
+           }
+        </style>
 
     </head>
 
     <body>
+        <header>
+			<ul>
+				<li style="float:left; margin-top:0px; margin-left: 15px; font-size: 25px; text-transform: uppercase; font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 10px; padding: 6px; border-radius: 10px;"><a href="information">Home</a></li>
+                <li> </li>
 
-        <h1>Choose a payment method</h1>
+			</ul>
 
-        <div>
-                    <a href="information/payment/paid"> <img src="{% static 'images/esewa.png' %}"> </a>
-                    <a href="information/payment/paid"><img src="{% static 'images/khalti.png' %}"></a>
+			
+		</header>
+   
+
+        <h1 style="margin-left:550px;margin-top:50px;">Choose a payment method</h1>
+
+        <div class="class1">
+                    <a href="payform"> <img src="{% static 'images/esewa.png' %}"> </a>
+                    <a href="payform"><img src="{% static 'images/khalti.png' %}"></a>
 
             
         </div>

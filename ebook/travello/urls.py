@@ -7,9 +7,11 @@ urlpatterns=[
     
 
     path('',views.index, name='index'),
-    path('information/',views.information,name='information'),
-    path('information/payment',views.payment,name='payment'),
-    path('information/information/payment/paid',views.paid,name='paid')
+    path('information',views.information,name='information'),
+    path('payment',views.payment,name='payment'),
+    path('paid',views.paid,name='paid'),
+    path('payform',views.payform,name='payform')
+    
 
 
     

@@ -15,10 +15,14 @@
 <body>
 
 <div>
-    <img src="{% static 'images/tick.jpg' %}">    
+
+    
+            <img src="{% static 'images/tick.jpg' %}">    
             {% for message in messages %}
             <h4 style="margin-left:50px ;">{{message }}</h4>
             {% endfor %}
+
+            <a href="information">Done</a>
 </div>
 </body>
 </html>

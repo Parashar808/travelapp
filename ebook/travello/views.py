@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib import messages
+
 
 from travello.models import Destination
 from django.contrib.auth.decorators import login_required
@@ -14,4 +16,17 @@ def index(request):
 def information(request):
         dests=Destination.objects.all()
         return render(request,'information.html',{'dests':dests})
+
+
+def payment(request):
+
+        
+        return render(request,'payment.html')
+
+def paid(request):
+
+        messages.info(request,'Payment successful !!! ')
+
+        return render(request,'paid.html')
+
 

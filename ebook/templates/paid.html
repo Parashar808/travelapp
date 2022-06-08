@@ -1,0 +1,25 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        div{
+            margin: 100px 0px 0px 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <img src="{% static 'images/tick.jpg' %}">    
+            {% for message in messages %}
+            <h4 style="margin-left:50px ;">{{message }}</h4>
+            {% endfor %}
+</div>
+</body>
+</html>
+            

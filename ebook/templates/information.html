@@ -66,6 +66,9 @@
                        li a:hover{
                             background-color: #ddd;
                        }
+                       a{
+                              color:black;
+                       }
        
 
               </style>
@@ -92,8 +95,9 @@
 
 
               <section>
+<a class="payment1" href="payment">
 
-       <div style="margin: 100px 0px 25px 50px; height:300;"  onclick="myalert()">
+       <div style="margin: 100px 0px 25px 50px; height:300;"  onclick="myfunction()">
 						
 
               {% for dest in dests %}
@@ -119,13 +123,16 @@
                              -->
                             </div>
               {% endfor %}
-</div>
-
+       </div>
+</a>
 <script>
-function myalert() {
-alert("register and login first");
-}
+       function myfunction() {
+          
+ 
+       }
+       
 </script>
+
 </section>
        </body>
 </html>

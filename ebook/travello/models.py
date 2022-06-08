@@ -1,4 +1,5 @@
 from django.db import models
+# from sqlalchemy import false
 
 class Destination(models.Model):
     
@@ -7,6 +8,7 @@ class Destination(models.Model):
     des=models.TextField()
     price=models.IntegerField()
     video=models.FileField(upload_to='vids')
+    
 
 # Create your models here.
     

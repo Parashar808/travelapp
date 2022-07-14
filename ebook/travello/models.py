@@ -7,8 +7,6 @@ class Destination(models.Model):
     name=models.CharField(max_length=100)
     des=models.TextField()
     price=models.IntegerField()
-    video=models.FileField(upload_to='vids')
-    
+    duration=models.CharField(max_length=100)    
 
 # Create your models here.
-    

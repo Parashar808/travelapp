@@ -36,3 +36,7 @@ def paid(request):
 def payform(request):
         return render(request,'payform.html')
 
+def about(request):
+        return render(request,'about.html')
+
+

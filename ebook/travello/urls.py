@@ -10,7 +10,8 @@ urlpatterns=[
     path('information',views.information,name='information'),
     path('payment',views.payment,name='payment'),
     path('paid',views.paid,name='paid'),
-    path('payform',views.payform,name='payform')
+    path('payform',views.payform,name='payform'),
+    path('about',views.about,name='about')
     
 
 

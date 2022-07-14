@@ -1,27 +1,164 @@
 {% load static %}
 {% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <style>
+           input,h1{
+               margin:30px 0px 0px 150px;
+           }
+           form{
+
+            border: 0px solid ;
+            margin-left: 500px;
+           }
+           .c1{
+            width:100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           }
+           .bg1{
+            margin-left: 200px;
+
+                    
+           }
+           ul {
+			
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+            
+       }
+       
+       li {
+            float: right;
+       }
+       li,a:hover{
+              color:black;	
+     
+
+       }
+
+       a{
+           text-decoration: none;
+           color:rgb(152, 66, 66);	
+           
+       }
+       body{
+        height: 100%;
+        margin:0px;
+       }
+       .c1{
+            height:80vh;
+            margin-top: 10px;
+
+       }
+       .register123{
+            margin-left: 15px;
+            background-color:white;
+            color:black;
+            padding:1px;
+       }
+       .register123:hover{
+            font-size:17px;
+            color:black;;
+       }
+      
+
+
+        
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+			<ul>
+				<li style="float:left; margin-top:0px; margin-left: 15px; font-size: 40px; text-transform: uppercase; font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 10px; padding: 6px; border-radius: 10px;"><a href="/">Travel</a></li>
+					
+                    <li> </li>
+
+			</ul>
+
+			
+		</header>
+   
+        <div class="c1" style="background-image:url({% static 'images/h2.jpg' %});" >
+
+
+            <form action="register" method="POST" class='bg1' style="height:75vh; width:70vh;border:1px solid black;    " >
+                {% csrf_token %}
+                <h1 style="color:white ;">Register Form</h1>
+                <input type="text" name="first_name" placeholder="first name"><br>
+                <input type="text" name="last_name" placeholder="last name"><br>
+                <input type="email" name="email" placeholder="email"><br>
+                <input type="text" name="username" placeholder="username"><br>
+                <input type="password" name="password1" placeholder="password"><br>
+                <input type="password" name="password2" placeholder="confirm password"><br>
+                <input type="submit">
+
+                <a href="login" style="color:black; background-color:white;" >Login..</a>
+            </form>
+
+            <div>
+                {% for message in messages %}
+                <h4>{{message }}</h4>
+                {% endfor %}    
+            </div>
+
+        
+    </div>
+		<div style="color:black;text-align:center;margin-top:10px;margin-bottom:15px;font-weight:bold;font-size:25px;">We make travel awesome....</div>
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- {% load static %}
+{% static "images" as baseUrl %}
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>Register</title>
         <style>
-            input,h1{
-                margin:20px 0px 0px 130px;
+            
+           input, h1{
+                margin-bottom:5px;
+                margin-top: 0px;
             }
             
-            .c1{
-             width:100%;
-             background-position: center;
-             background-repeat: no-repeat;
-             background-size: cover;
-            }
             .bg1{
-                margin-left:1100px;
-                background-color: aliceblue;
-
- 
+                margin-left: 1000px;
+                background-color: black;
+            
             }
+            .c1{
+                height:80vh;
+                margin-top: 10px;
+                background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                
+    
+           }
+          
+            
             ul {
 			
                 list-style-type: none;
@@ -53,6 +190,11 @@
          color:black;
      }
 
+     form{
+        
+        margin-left: 600px;
+        
+     }
     
         </style>
     </head>
@@ -60,19 +202,45 @@
     <body>
         <header>
 			<ul>
-				<li style="float:left; margin-top:0px; margin-left: 15px; font-size: 25px; text-transform: uppercase; font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 10px; padding: 6px; border-radius: 10px;"><a href="/">Travel</a></li>
+				<li style="float:left; margin-top:0px; margin-left: 15px; font-size: 40px; text-transform: uppercase; font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 10px; padding: 6px; border-radius: 10px;"><a href="/">Travel</a></li>
                 <li></li>
 
 			</ul>
 
 			
 		</header>
-   
-        <div class="c1" style=" background-image:url({% static 'images/register1234.jpg' %});" >
+        <div class="c1" style=" background-image:url({% static 'images/newreg.jpg' %});" >   
 
-        <form action="register" method="POST" class="bg1" style="height:80vh; width:60vh;border:1px solid black;    ">
+            <form action="register" method="POST" class='bg1' style="height:75vh; width:70vh;border:1px solid black;    " >
+                {% csrf_token %}
+                <h1 style="color:white ;">Register Form</h1>
+                <input type="text" name="first_name" placeholder="first name"><br>
+                <input type="text" name="last_name" placeholder="last name"><br>
+                <input type="email" name="email" placeholder="email"><br>
+                <input type="text" name="username" placeholder="username"><br>
+                <input type="password" name="password1" placeholder="password"><br>
+                <input type="password" name="password2" placeholder="confirm password"><br>
+                <input type="submit">
+
+                <a href="login" >Login..</a>
+            </form>
+
+            <div>
+                {% for message in messages %}
+                <h4>{{message }}</h4>
+                {% endfor %}    
+            </div>
+
+		<div style="color:black;text-align:center;margin-top:25px;font-weight:bold;font-size:25px;">We make travel awesome....</div>
+
+    </body>
+
+ -->
+    <!-- <div class="c1" style=" background-image:url({% static 'images/pagge.jpg' %});" >
+
+        <form action="register" method="POST" class="bg1" style="height:60vh; width:80vh;">
             {% csrf_token %}
-            <h1>Register Form</h1>
+            <h1 style="color:white;margin-top:100px;">Register Form</h1>
             <input type="text" name="first_name" placeholder="first name"><br>
             <input type="text" name="last_name" placeholder="last name"><br>
             <input type="email" name="email" placeholder="email"><br>
@@ -89,9 +257,6 @@
             <h4>{{message }}</h4>
             {% endfor %}    
         </div>
-        </div>
-    </body>
-
-
+    </div> -->
 
 </html>

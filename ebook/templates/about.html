@@ -1,0 +1,78 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul {
+			
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 1px solid #e7e7e7;
+                background-color: #f3f3f3;
+                
+           }
+           
+           
+           li,a:hover{
+                  color:rgb(152, 66, 66);	
+         
+    
+           }
+    
+           a{
+               text-decoration: none;
+               color:black;
+           }
+           
+           .container-item{
+            display: flex;
+            
+            
+            flex-direction: row;
+            height:40vh;
+        }
+        
+           p{
+               
+                margin-left: 70px;
+                font-size:18px;
+               
+
+           }
+    
+    
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+			<ul>
+				<li style="float:left; margin-top:0px; margin-left: 650px; font-size: 25px; text-transform: uppercase; font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 10px; padding: 6px; border-radius: 10px;"><a href="/">Travel</a></li>
+                <li> </li>
+
+			</ul>
+            <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:20px;">ABOUT US</h1>
+            <div class="container-item">
+                <p style="width:50%;">We are a Nepal based company who are providing efficient travelling service to national and international tourists. We provide cost effective, reasonable ,and attractive travel plans and services of more than 50 hiking destionations, more than 20 religious sites and more than 100 travel destinations of Nepal. 
+                    Nepal being a country with geographical diversities we offer variety of traveling and touring opportunities in different geologies and landscapes. We offer vacational tours and mind refreshing walks into the nature, through the forest keeping different aspects of mental calmness and peaceful panaroms. </p>
+                <img style="height:35vh; weidth:50vh; margin-left:100px; " src="{% static '/images/office.jpg'%}"/>
+                
+            </div>
+            <p  style="margin-right:50px; ;">The TRAVEL site was initially conceptualized by Parashar Baral on May,2022 and then coded and, hosted officially on 10th June,2022.All together,we have a team of 5 developers. The project was initiated as an initial startup for <strong> LARP Travel and tours</strong> where our central office will be located on Gwarko lalitpur and our branches will be available all over <strong>Nepal</strong>. The initial invetsment amount is 600 thousands.</p>
+             
+
+            <footer>
+
+            </footer>
+
+			
+		</header>
+           
+
+    </body>
+
+</html>

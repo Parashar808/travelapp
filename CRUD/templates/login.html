@@ -1,0 +1,44 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <style>
+           
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+			<ul>
+				
+			</ul>
+
+			
+		</header>
+   
+
+
+        <form action="login" method="POST" class="bg1" style="height:80vh; width:70vh;border:1px solid black;    " >
+            {% csrf_token %}
+            <h1 style="margin-top:100px ;" >Login Form</h1>
+            <input type="text" name="username" placeholder="username"><br/>
+            <input type="password" name="password" placeholder="password"><br/>
+            <input type="submit">
+            <a href="register">Register</a>
+        </form>
+
+        <div>
+            {% for message in messages%}
+
+            <h3>{{message}}</h3>
+            {% endfor %}
+        </div>
+        
+    </div>
+
+    </body>
+</html>

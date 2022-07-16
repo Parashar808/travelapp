@@ -1,0 +1,27 @@
+{% if user.is_superuser %}
+                    <a href="/edit/{{complain.pk}}">edit</a></td>
+                    <td>
+                    <a href="/remove/{{complain.pk}}">Delete</a>
+                </td>
+                {% else %}
+                                {% if complain.user == request.user %}
+
+                                    <a href="/edit/{{complain.pk}}">Update</a>
+                                {% else %}
+                                    <p>You cannot update other's complain</p>
+                                {% endif %}
+                                    
+                                </td>
+                                <td>
+                                {% if complain.user == request.user %}
+
+                                    <a href="/remove/{{complain.pk}}">Delete</a>
+                                {% else %}
+                                    <p>You cannot delete other's complain</p>
+                                {% endif %}
+                                
+                    
+
+                    
+
+                {% endif %}

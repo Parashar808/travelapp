@@ -11,7 +11,8 @@ urlpatterns=[
     path('payment',views.payment,name='payment'),
     path('paid',views.paid,name='paid'),
     path('payform',views.payform,name='payform'),
-    path('about',views.about,name='about')
+    path('about',views.about,name='about'),
+    path('read',views.read,name='read')
     
 
 

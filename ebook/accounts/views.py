@@ -57,6 +57,7 @@ def logout(request):
     return redirect('/')
 
 
+
 # @login_required(login_url="login")
 # def information(request):
 #     return render(request,'information.html')

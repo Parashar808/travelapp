@@ -36,15 +36,20 @@
     <body>
         <div class="c1" style="background-image:url({% static 'images/payment.webp' %}); height:60vh;width:60%; ">
         
-            <h1 >Payment form</h1>
+            <h1 style="text-align: center;" >Payment form</h1>
         <form style="width:300px;">
             <h2 >ID/NAME:</h2>
-            <input type="text" name="name" placeholder="ID"><br/><br/>
+            <input type="text" name="name" placeholder="ID" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br/><br/>
             <h2>PIN NUMBER:</h2>
-            <input type="password" name="password" placeholder="Pin"><br/>
-            <a href="paid" style="text-decoration:none ;">Submit</a>
+            <input type="password" name="password" placeholder="Pin" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br/>
+            <div style="margin:20px;"></div>
+            <a href="paid" class="register123" style="background-color: crimson;  color: #fff; font-size: 15px; border-radius: 10px; padding: 8px 18px;">SUBMIT</a>
+            <a href="information" class="register123" style="background-color: crimson;  color: #fff; font-size: 15px; border-radius: 10px; padding: 8px 18px;text-decoration:none;">RETURN</a>
+
+            
         </form>
-        <a href="information">Return</a>
+        
+
 
     </div>
 

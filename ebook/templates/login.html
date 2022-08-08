@@ -5,9 +5,10 @@
     <head>
         <title>login</title>
         <style>
-           input,h1{
+           input,h1,button{
                margin:30px 0px 0px 150px;
            }
+          
            form{
 
             border: 0px solid ;
@@ -65,7 +66,7 @@
             padding:1px;
        }
        .register123:hover{
-            font-size:17px;
+            font-size:18px;
             color:black;;
        }
       
@@ -94,17 +95,17 @@
 
         <form action="login" method="POST" class="bg1" style="height:75vh; width:70vh;border:1px solid black;    " >
             {% csrf_token %}
-            <h1 style="margin-top:100px; color:white;font-size:35px;" >Login Form</h1>
-            <input type="text" name="username" placeholder="username"><br/>
-            <input type="password" name="password" placeholder="password"><br/>
-            <input type="submit">
-            <a href="register" class="register123">Register..</a>
+            <h1 style="margin-top:100px; color:white;font-size:35px;" >LOGIN FORM</h1>
+            <input type="text" name="username" placeholder="username" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br/>
+            <input type="password" name="password" placeholder="password" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border:1px solid crimson"><br/>
+            <button  style="background-color: crimson;  color: #fff; font-size: 18px; border-radius: 10px; padding: 8px 18px;">SUBMIT </button>
+            <a href="register" class="register123" style="background-color: crimson;  color: #fff; font-size: 20px; border-radius: 10px; padding: 8px 18px;">REGISTER</a>
         </form>
 
         <div>
             {% for message in messages%}
 
-            <h3>{{message}}</h3>
+            <h3 style="color:white;">{{message}}</h3>
             {% endfor %}
         </div>
         

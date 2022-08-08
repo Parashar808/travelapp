@@ -14,7 +14,13 @@ def index(request):
 
 @login_required(login_url="login")
 def information(request):
-        dests=Destination.objects.all()
+        if 'search' in request.GET:
+                search=request.GET['search']
+                dests = Destination.objects.filter(name__icontains=search)
+
+        else:
+                dests=Destination.objects.all()
+
         return render(request,'information.html',{'dests':dests})
 
 @login_required(login_url="login")
@@ -38,5 +44,9 @@ def payform(request):
 
 def about(request):
         return render(request,'about.html')
+
+def read(request):
+    return render(request,'readmore.html')
+
 
 

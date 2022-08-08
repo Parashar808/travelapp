@@ -5,7 +5,7 @@
     <head>
         <title>login</title>
         <style>
-           input,h1{
+           input,h1, button{
                margin:30px 0px 0px 150px;
            }
            form{
@@ -65,7 +65,7 @@
             padding:1px;
        }
        .register123:hover{
-            font-size:17px;
+            font-size:18px;
             color:black;;
        }
       
@@ -95,15 +95,17 @@
             <form action="register" method="POST" class='bg1' style="height:75vh; width:70vh;border:1px solid black;    " >
                 {% csrf_token %}
                 <h1 style="color:white ;">Register Form</h1>
-                <input type="text" name="first_name" placeholder="first name"><br>
-                <input type="text" name="last_name" placeholder="last name"><br>
-                <input type="email" name="email" placeholder="email"><br>
-                <input type="text" name="username" placeholder="username"><br>
-                <input type="password" name="password1" placeholder="password"><br>
-                <input type="password" name="password2" placeholder="confirm password"><br>
-                <input type="submit">
+                <input type="text" name="first_name" placeholder="first name" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br>
+                <input type="text" name="last_name" placeholder="last name" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br>
+                <input type="email" name="email" placeholder="email" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br>
+                <input type="text" name="username" placeholder="username" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br>
+                <input type="password" name="password1" placeholder="password" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br>
+                <input type="password" name="password2" placeholder="confirm password" style="width:80% ; padding: 6px 10px; border-radius:7px; outline:none; border: 1px solid crimson"><br>
 
-                <a href="login" style="color:black; background-color:white;" >Login..</a>
+
+                <button  style="background-color: crimson;  color: #fff; font-size: 18px; border-radius: 10px; padding: 8px 18px;">SUBMIT </button>
+                <a href="login" class="register123" style="background-color: crimson;  color: #fff; font-size: 20px; border-radius: 10px; padding: 8px 18px;">LOGIN</a>
+
             </form>
 
             <div>
